@@ -57,6 +57,7 @@ $(document).ready(function() {
 				});
 				return false;
 			});
+			$('.form-element').append('<p class="creator"><a href=""</a></p>');
 		}
 		function okay(f) {
 			f.html('<h4 style="color: #fff;">Спасибо, Ваш заявка отправлена!</h4><p style="color: #fff;">Я вам перезвоню в течении 30-ти минут.</p>'); // сунем в форму сообщение что все ок

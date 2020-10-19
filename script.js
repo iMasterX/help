@@ -7,7 +7,7 @@ $(document).ready(function() {
 				// вырезал проверку на ошибку (подсвечивание красным)
 
 				let tel = $("#testInput").val(); //значение поля телефона
-				if (tel.length < 17) { //если длина меньше 17
+				if (tel.indexOf('_') != -1) { //если длина меньше 17
 					alert('Введите корректный номер телефона!');
 					return false; //останавливаем
 				}
@@ -19,7 +19,7 @@ $(document).ready(function() {
 					type: "POST",
 					dataType: "xml",
 					beforeSend: function () {
-						form.find('.send__form').attr('disabled'); //откючим кнопку
+						form.find('.send__form').attr('disabled'); //отключим кнопку
 					},
 					statusCode: {
 						0: () => okay(form), //стрелочная функция https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions
